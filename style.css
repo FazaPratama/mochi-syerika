@@ -1,0 +1,215 @@
+root {
+    --cream: #fdfce8;
+        --brown: #c7a07a;
+        --cream: #e2ceb1;
+        --brown: #734128;
+        --white: #fff;
+        --grey: #eee;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #ffffff;
+        color: #eeeeee;
+        min-height: 2000px;
+    }
+
+    section {
+        padding: 2rem;
+    }
+    
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 7%;
+        background-color: #fdfce8cc;
+        border-bottom: 1px solid #734128;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    } 
+    
+    .navbar .navbar-logo {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #734128;
+    }
+    
+    .navbar .navbar-logo span {
+        color: #c7a07a;
+    }
+    
+    .navbar .navbar-nav a {
+        color: #734128;
+        display: inline-block;
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin: 0 1rem;
+    }
+    
+    .navbar .navbar-nav a:hover {
+        color: #c7a07a;
+    }
+    
+    .navbar .navbar-nav a::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid #734128;
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+    
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(1);
+    }
+    
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;            
+        background-image: url('../img/mochi background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;            
+        background-position: center;
+        position: relative;  
+    }
+    
+    .hero .content {
+        padding: 1.4rem 7%;
+        max-width: 60rem;
+    }
+
+    .hero .content h1 {
+        font-size: 4em;
+        color: #734128;
+        text-shadow: 1px 1px 3px rgb(238, 238, 238, 1.5);
+    }
+
+    .hero .content h1 span {
+        color: #c7a07a;
+    }
+
+    .hero .content p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        line-height: 1.4;
+        font-weight: 100;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgb(238, 238, 238, 1.5);
+    }
+
+    .hero .content .cta {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: 1.4rem;
+        color: #fff;
+        background-color: #c7a07a;
+        border-radius: 0.5rem;
+        box-sizing: 1px 1px 3px rgba(115, 65, 40, 0.5);
+    }
+
+    /* About Section */
+    .about {
+        padding: 8rem 7% 1.4rem;
+    }
+
+    .about h2 {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 3rem;
+        color:#734128;
+    }
+
+    .about h2 span {
+        color: #c7a07a;
+    }
+
+    .about .row {
+        display: flex;
+    }
+
+    .about .row .about-img {
+        flex: 1 1 45rem;
+    }
+
+    .about .row .about-img img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about .row .content p {
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        font-weight: 100;
+        line-height: 1.6;
+    }
+
+    /* Media Queris */
+    /* Laptop */
+    @media(max-width: 1366px) {
+        html {
+            font-size: 75%;
+        }
+    }
+    
+    /* Tablet */
+    @media(max-width: 768px) {
+        html {
+            font-size: 62.5%;
+        }
+
+        .about .row {
+            flex-wrap: wrap;
+        }
+
+        .about .row .about-img {
+            text-align: center;
+        }
+
+        .about .row .about-img img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    
+    /* HP */
+    @media(max-width: 450px) {
+        html {
+            font-size: 55%;
+        }
+
+        .about .row {
+            flex-wrap: wrap;
+        }
+
+        .about .row .about-img {
+            text-align: center;
+        }
+
+        .about .row .about-img img {
+            width: 200px;
+            height: 200px;
+        }
+    }
